@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David's Web</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>David's <br>Web</h1>
+    
+        <p>分享一下你家的勞贖吧！</p>
+    </header>
+
+    
+
+<main>
+    
+    <p><strong>*為必填項目。</strong></p>
+    <form action="table.html" method="post">
+    <table>
+    <caption>主子資料</caption>
+    <!-- 表格標題 -->
+    <tr>
+        <th>主子名*</th>
+        <td><input type="text" name="lordname" id="lordname" required>
+        <label for="lordname" id="lordname"></label></td>
+    </tr>
+    <tr>
+        <th>年齡*</th>
+        <td>
+            <select name="year" id="" required>
+            <option value="select">請選擇</option>
+            <option value="one">0-1歲</option>
+            <option value="two">1-2歲</option>
+            <option value="three">3-5歲</option>
+            <option value="four">6-10歲</option>
+            </select>
+        </td>
+    </tr> 
+    <tr>
+        <th>性別*</th>
+        <td>
+            <input type="radio" name="gender" value="male" id="male" required><label for="male" id="male" checked>男生</label>
+            <input type="radio" name="gender" value="female" id="female"><label for="female" id="female">女生</label></td>
+    </tr>   
+
+    <tr>
+            <th>最愛的食物</th>
+            <td>
+                    <input type="checkbox" name="food" value="fish" checked>魚
+                    <input type="checkbox" name="food" value="meat">肉
+                    <input type="checkbox" name="food" value="feed">飼料
+                    <input type="checkbox" name="food" value="can">罐頭
+                    <input type="checkbox" name="food" value="paste">肉泥
+                    <input type="checkbox" name="food" value="others">其他
+            </td>
+    </tr>
+
+        <tr>
+            <th>照片*</th>
+            <td><input type="file" name="photo"></td>
+        </tr>
+</table> <br>
+
+<table>
+    <caption>奴才資料</caption>
+    <tr>
+        <th>奴才名*</th>
+        <td><input type="text" name="servname" id="" placeholder="咖啡" required>※可用暱稱</td>
+    </tr>
+    <tr>
+        <th>E-mail*</th>
+        <td><input type="email" name="email" id="" placeholder="sample@gmail.com" required>※請輸入半形文字</td>
+    </tr> 
+    <tr>
+        <th>留言</th>
+        <td><textarea name="board" id="" cols="50" rows="5"></textarea></td>
+        <!-- 一開始會預留卷軸位置 -->
+    </tr> 
+
+</table>
+
+<div class="btn">
+        <input type="reset" id="reset" value="清除重填" >
+
+        <input type="submit" id="submit" value="送出">
+    
+    
+</div>
+</form>
+
+
+</main>
+    
+<footer>    
+    <p>
+        <small><i>Copyright © David's Web All Rights Reserved.</i></small>
+    </p>
+</footer>
+    
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+@charset "utf-8";
+@import url(http://fonts.googleapics.com/earlyaccess/notosanstc.css);
+@import url(http://fonts.googleapics.com/earlyaccess/cwtexming.css);
+@import url(http://fonts.googleapics.com/earlyaccess/cwtexkai.css);
+@import url(http://fonts.googleapics.com/earlyaccess/cwtexyen.css);
+@import url(http://fonts.googleapics.com/earlyaccess/cwtexfangsong.css);
+
+@font-face {
+    font-family: Dosis;
+    src: url(./Dosis-VariableFont_wght.ttf);
+}
+
+
+
+
+/*視窗背景色設定*/
+body {
+
+    background: #fbf9cc url(./images/bg.png) repeat-x;
+}
+
+
+/*連結顏色設定*/
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: red
+}
+
+a:hover {
+    color: pink
+}
+
+a:active {
+    color: plum
+}
+
+/*頁首,導覽,頁尾的共通設定*/
+header,
+nav,
+footer {
+    text-align: center;
+}
+
+/*導覽樣式設定*/
+.menu {
+    margin-left: -2.5em;
+}
+
+.menu li {
+    list-style: none;
+    /* border: 1px solid; */
+    width: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    background-color: #6fbb9a;
+    padding: 10px;
+    display: block;
+    /* 樣式做在a裡面才可讓整個區塊都有超連結 */
+    border-radius: 10px;
+}
+
+/*頁面標題設定*/
+h1 {
+    color: white;
+    background-color: #58a886;
+    width: 333px;
+    border: 10px solid #95dbbd;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    border-radius: 50%;
+    font-family: Dosis;
+    font-size: 3em;
+    line-height: 1em;
+    text-shadow:
+        0 1px 0 #CCC,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #BBB,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #6ebb99, #469975);
+}
+
+/*次標題設定*/
+h2 {
+    border-color: #73b79c;
+    border: 1px dotted #73b79c;
+    border-left: 10px solid #d0e35b;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    color: #73b79c;
+    font-family: 'cwTeXYen', sans-serif;
+}
+
+/*小標題設定*/
+
+h3 {
+    color: #ff6f58;
+
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fbf9cc;
+    box-shadow: 1px 1px 5px 2px #fdddb3 inset;
+    border-radius: 10px;
+    font-family: 'cwTeXFangSong', serif;
+}
+
+/*內容區塊邊框設定*/
+main {
+    width: 960px;
+    background-color: #FFF;
+    margin: 40px auto;
+    /* 邊界 */
+    padding: 40px 80px;
+    /* 內距 */
+    border: 1px solid #f6c2a0;
+    box-sizing: border-box;
+    
+    /* 調整內容至所設width以內 */
+}
+/* 表格設定 */
+
+table {
+    border: 2px solid #F5b494;
+    width: 100%;
+    margin-bottom: 40px;
+    border-collapse:collapse
+}
+
+
+table th, table td {
+    border: 1px solid #F5b494;
+    padding: 10px 20px;
+
+}
+table th{
+    text-align: left;
+    background-color: #ffeeee;
+    width: 10em;
+}
+table caption{
+    margin-bottom: 10px;
+}
+
+table input[ type="text"], 
+table input[ type="email"], 
+table textarea{
+    width: 100%;
+    border: 1px solid lightgray;
+    font-size: 1em;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+table input[ type="text"]:focus, 
+table input[ type="email"]:focus, 
+table textarea:focus{
+background-color: lightgoldenrodyellow;
+outline: none;
+border-left: 5px solid #00ff00;
+}
+
+/* 按鈕設定 */
+.btn{
+    text-align: center;
+}
+
+.btn input{
+    background-color: white; 
+    width: 200px;
+    margin: 0 10px; 
+    padding: 10px;
+    border: 2px solid #f7c2a8;
+    border-radius: 10px; 
+    font-size: 1em;
+}
+.btn input:hover{
+    background-color:#fadccc;
+
+}
+
+
+/*「更多介紹」連結設定*/
+.more{
+    text-align: right;
+}
+.more::after{
+    content: url(./images/ico_arrow.png);
+    margin-left: 3px;
+    vertical-align: middle;
+}
+/*連結圖示設定*/
+
+a[href ^= "mailto:"]::after{
+    content: url(./images/ico_mail.png);
+    margin-left: 3px;
+    vertical-align: middle;
+    }
+a[href *= "gov"]::after{
+        content: url(./images/ico_blank.png);
+        margin-left: 3px;
+        vertical-align: middle;
+        }
+        
+
+/*區塊間分隔*/
+main >section+section{
+    margin-top: 100px;
+}
+/* 1. xy x標籤內，包的所有y標籤子元素
+2. x>y x標籤內，直接子層的y
+3. x+y x標籤後面，接的第一個y標籤
+4. x~y x標籤後面，接的所有y標籤 */
+
+/*文繞圖設定*/
+.imgL{
+    float:left;
+    margin: 10px;
+}
+
+.imgR{
+    float:right;
+    margin: 10px;
+}
+
+.clear{
+    clear:both;
+
+}
+
+.clearfix::after{
+    content:"";
+    clear: both;
+    display: block;
+}
+/*圓形圖片設定*/
+.imgL{
+    border-color: #95dbbd;
+    border-radius: 50%;
+}
+
+/* 字體設定 */
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
